@@ -1,10 +1,6 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Navbar from '../components/Navbar'
 import styles from '../styles/Home.module.css'
-
-
-
 
 export default function Home() {
 
@@ -18,45 +14,32 @@ export default function Home() {
       </Head>
       <Navbar pageValue={0} />
       <div className={styles.heroImg}>
-          <img src="/homeImg.jpg" alt="home" className={styles.img} />
+        <img src="/homeImg.jpg" alt="home" className={styles.img} />
         <h1 className={styles.title}>
-          Hunting Coder
+          {"<Hunting Coder />"}
         </h1>
       </div>
       <main className={styles.main}>
 
         <p className={styles.description}>
-         { `"A blog for a hunting coder by a hunting coder"`}
+          {`"A blog for a hunting coder by a hunting coder"`}
         </p>
         <div className="blogs">
-          <h2>Popular Blogs</h2>
+          <h3><u>Popular Blogs</u></h3>
           <div className="blogItem">
-            <h3>How to learn JavaScript in 2022?</h3>
+            <h5>How to learn JavaScript in 2022?</h5>
             <p>JavaScript is the language used to design logic for the web</p>
           </div>
           <div className="blogItem">
-            <h3>How to learn JavaScript in 2022?</h3>
+            <h5>How to learn JavaScript in 2022?</h5>
             <p>JavaScript is the language used to design logic for the web</p>
           </div>
           <div className="blogItem">
-            <h3>How to learn JavaScript in 2022?</h3>
+            <h5>How to learn JavaScript in 2022?</h5>
             <p>JavaScript is the language used to design logic for the web</p>
           </div>
         </div>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
     </div>
   )
 }
