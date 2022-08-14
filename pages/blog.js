@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar'
 import { Box, Typography, Container } from '@mui/material'
 import Link from 'next/link'
 import axios from 'axios'
-import * as fs from 'fs';
+// import * as fs from 'fs';
 import InfiniteScroll from 'react-infinite-scroll-component';
 
 
@@ -61,14 +61,14 @@ const Blog = ({ allBlogs, blogCount }) => {
 // export async function getServerSideProps(context) {
 //   // Fetch data from external API
 //   const { data } = await axios.get(`http://localhost:3000/api/blogs`);
-//   console.log(data);
+//   // console.log(data);
 
 //   // Pass data to the page via props
-//   return { props: { blogs: data } }
+//   return { props: { allBlogs: data.allBlogs, blogCount: data.blogCount} }
 // }
 
 
-//implementing static site rendering
+// implementing static site rendering
 // This function gets called at build time
 export async function getStaticProps(context) {
   // Call an external API endpoint to get posts
@@ -87,6 +87,6 @@ export async function getStaticProps(context) {
       allBlogs, blogCount: data.length
     },
   }
-}
+s }
 
 export default Blog
