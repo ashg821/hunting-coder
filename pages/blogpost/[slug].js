@@ -49,8 +49,10 @@ export async function getServerSideProps(context) {
 // }
 
 
+
+//in a dynmaic route page where multiple pages are rendered from the same URL(with the help of slug)
 // export async function getStaticProps(context) {
-//   console.log(context.params.slug);
+//   // console.log(context.params.slug);
 //   let fileData;
 //   fileData = JSON.parse(await fs.promises.readFile(`blogData/${context.params.slug}.json`, "utf-8"));
 
